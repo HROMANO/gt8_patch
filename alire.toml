@@ -1,0 +1,12 @@
+name = "gt8_patch"
+description = "Detect if sysex files are not for the Boss GT-8"
+version = "0.1.0-dev"
+
+authors = ["Shuihuzhuan"]
+maintainers = ["Shuihuzhuan <shuihuzhuan@free.fr>"]
+maintainers-logins = ["shuihuzhuan"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
+
+executables = ["gt8_patch"]

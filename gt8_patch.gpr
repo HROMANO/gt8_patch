@@ -1,0 +1,22 @@
+with "config/gt8_patch_config.gpr";
+project Gt8_Patch is
+
+   for Source_Dirs use ("src/", "config/");
+   for Object_Dir use "obj/" & Gt8_Patch_Config.Build_Profile;
+   for Create_Missing_Dirs use "True";
+   for Exec_Dir use "bin";
+   for Main use ("gt8_patch.adb");
+
+   package Compiler is
+      for Default_Switches ("Ada") use Gt8_Patch_Config.Ada_Compiler_Switches;
+   end Compiler;
+
+   package Binder is
+      for Switches ("Ada") use ("-Es"); --  Symbolic traceback
+   end Binder;
+
+   package Install is
+      for Artifacts (".") use ("share");
+   end Install;
+
+end Gt8_Patch;
